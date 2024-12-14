@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="js/scripts.js"></script>
+    <script type="module" src="js/firebaseAuth.js"></script>
+</head>
+<body>
+
+    <div id="modalWindow" class="modal">
+        <div class="modal-content">
+            <div class="modal-content__but">
+                <p id="errorMessage"></p>
+                <button class="close" id="okButton">ОК</button>
+            </div>   
+        </div>
+    </div>
+
+
+    <div class="button-conteiner">
+        <div class="button">
+            <button class="button__sign-in button" onclick="openFormAndReset()">Войти</button>
+        </div>
+        <div class="button">
+            <button class="button__sign-out button" onclick="closeFormAndReset()">Регистрация</button>
+        </div>
+    </div>
+
+    <form id="signInForm" >
+        <section class="first-container" id="first-form">
+            <header class="header-content">
+                <ol class="header-content__list ">
+                    <li class="header-content__list-item"><span>Вход</span></li>
+                    <li class="header-content__list-item-reg"><button type="button" onclick="closeForm()">Регистрация</button></li>
+                    <li class="header-content__list-item"><button type="button" onclick="closeTwoForm()"><img src="img/Vector.png" alt="выход"></button></li>
+                </ol>  
+            </header>
+        <hr>
+        <div class="center-conteiner">
+            <div class="first-input block">
+                <p class="block__text">e-mail:</p>
+                <input id="emailSignIn" placeholder="Введите e-mail: example@yandex.by" required minlength="5" maxlength="50" type="email" title="Введите логин" class="block__input ">
+            </div>
+            <div class="second-input block">
+                <p class="block__text">пароль:</p>
+                <input id="passwordSignIn" placeholder="Введите пароль:" required minlength="16" maxlength="32" type="password" title="Введите пароль" class="block__input">
+            </div>
+        </div>
+            <footer class="footer-conteiner">
+                <div class="first-checkbox">
+                    <input id="checkboxRemember" type="checkbox" class="first-checkbox__input">
+                    <p class="first-checkbox__text">Запомнить меня</p>
+                </div>
+                <div class="first-button">
+                    <button id="submitSignIn" class="first-button__button">Войти</button>
+                </div>
+            </footer>
+        </section>
+    </form>
+
+    <form id="signUpForm">
+        <section class="second-container" id="second-form">
+            <header class="header-content">
+                <ol class="header-content__list ">
+                    <li class="header-content__list-item"><button onclick="openForm()">Вход</button></li>
+                    <li class="header-content__list-item-reg"><span>Регистрация</span></li>
+                    <li class="header-content__list-item"><button onclick="closeTwoForm()"><img src="img/Vector.png" alt="выход"></button></li>
+                </ol>  
+            </header>
+        <hr>
+            <div class="center-conteiner">
+                <div class="first-input block">
+                    <p class="block__text">имя:</p>
+                    <input id="Name" placeholder="Введите имя:" required maxlength="30" type="text" title="Введите имя" class="block__input">
+                </div>
+                <div class="second-input block">
+                    <p class="block__text">e-mail:</p>
+                    <input id="Email" placeholder="Введите e-mail: example@yandex.by" minlength="5" maxlength="50" type="email" title="Введите e-mail" class="block__input">
+                </div>
+                <div class="third-input block">
+                    <p class="block__text">номер телефона:</p>
+                    <input id="NumberTeleph" placeholder="Введите номер телефона:" required minlength="9" maxlength="20" type="tel" title="Введите номер телефона" class="block__input">
+                </div>
+                <div class="fourth-input block">
+                    <p class="block__text">пароль:</p>
+                    <input id="Password" placeholder="Введите пароль:" required minlength="16" maxlength="32" type="password" title="Введите пароль" class="block__input">
+                </div>
+                <div class="fifth-input block">
+                    <p class="block__text">повторите пароль:</p>
+                    <input id="RepeatPassword" placeholder="Введите пароль повторно:" minlength="16" maxlength="32" type="password" title="Введите повторно пароль" class="block__input">
+                </div>
+            </div>
+            <footer class="footer-conteiner">
+                <div class="first-checkbox">
+                    <input id="checkbox" type="checkbox" class="first-checkbox__input">
+                    <p class="first-checkbox__text">Я согласен на обработку персональный данных</p>
+                </div>
+                <div class="first-button">
+                    <button id="submitSignUp" class="first-button__button-big button-big">Регистрация</button>
+                </div>
+            </footer>
+        </section>
+    </form>
+</body>
+</html>

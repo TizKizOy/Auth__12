@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script type="module" src="js/mainPage.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
+<body>
+    <div id="modalWindow" class="modal">
+        <div class="modal-content">
+            <div class="modal-content__but">
+                <p id="errorMessage"></p>
+                <button class="close" id="okButton">ОК</button>
+            </div>   
+        </div>
+    </div>
+
+    <div class="but__mainPage button-conteiner">
+        <div class="button">
+            <button id="logout" class="button__log-out button">Выйти</button>
+        </div>
+    </div>
+    <div class="main-conteiner">
+        <section class="main-section">
+            <form id="main-page" action="">
+                <div class="main-section__text">
+                    <p class="main-section__text-item">Мой профиль</p>
+                </div>
+                <hr>
+                <div class="paragraph-conteiner">
+                    <div class="first-paragraph block">
+                        <p class="block__text">имя:</p>
+                        <input id="nameParagraph" placeholder="Введите новое имя для изменения:" required minlength="5" maxlength="50" type="text" title="Введите новое имя чтобы изменить" class="block__input ">
+                    </div>
+                    <div class="second-paragraph block">
+                        <p class="block__text">e-mail:</p>
+                        <input id="emailParagraph" readonly placeholder="Введите новый e-mail для изменения:" required minlength="5" maxlength="50" type="email" title="ВВведите новый логин чтобы изменить" class="block__input ">
+                    </div>
+                    <div class="thierd-paragraph block">
+                        <p class="block__text">пароль:</p>
+                        <input id="passwordParagraph" readonly placeholder="Введите новый пароль для изменения:" required minlength="5" maxlength="50" type="password" title="Введите новый пароль чтобы изменить" class="block__input ">
+                    </div>
+                    <div class="four-paragraph block">
+                        <p class="block__text">номер телефона:</p>
+                        <input id="phoneParagraph" placeholder="Введите новый номер телефона для изменения:" required minlength="5" maxlength="20" type="tel" title="Введите новый номер телефона чтобы изменить" class="block__input">
+                    </div>
+                    <div class="five-paragraph block">
+                        <p class="block__text">дата регистрации:</p>
+                        <input id="dateParagraph" readonly required minlength="5" maxlength="20" type="text" class="block__input ">
+                    </div>
+                    <div class="three-button">
+                        <button type="button" id="changeData" class="changeData__button button">Изменить</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
